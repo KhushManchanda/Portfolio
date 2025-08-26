@@ -1,43 +1,68 @@
-import { users, contacts, type User, type InsertUser, type Contact, type InsertContact } from "@shared/schema";
-import { db } from "./db";
-import { eq } from "drizzle-orm";
+// Simple in-memory storage for portfolio website
+interface Contact {
+  id: string;
+  name: string;
+  email: string;
+  message: string;
+  createdAt: Date;
+}
 
-// modify the interface with any CRUD methods
-// you might need
+interface User {
+  id: string;
+  username: string;
+  email: string;
+  passwordHash: string;
+  createdAt: Date;
+  updatedAt: Date;
+}
 
 export interface IStorage {
   getUser(id: string): Promise<User | undefined>;
   getUserByUsername(username: string): Promise<User | undefined>;
-  createUser(user: InsertUser): Promise<User>;
-  createContact(contact: InsertContact): Promise<Contact>;
+  createUser(user: Omit<User, 'id' | 'createdAt' | 'updatedAt'>): Promise<User>;
+  createContact(contact: Omit<Contact, 'id' | 'createdAt'>): Promise<Contact>;
 }
 
-export class DatabaseStorage implements IStorage {
+export class InMemoryStorage implements IStorage {
+  private contacts: Contact[] = [];
+  private users: User[] = [];
+  private contactId = 1;
+  private userId = 1;
+
   async getUser(id: string): Promise<User | undefined> {
-    const [user] = await db.select().from(users).where(eq(users.id, id));
-    return user || undefined;
+    return this.users.find(user => user.id === id);
   }
 
   async getUserByUsername(username: string): Promise<User | undefined> {
-    const [user] = await db.select().from(users).where(eq(users.username, username));
-    return user || undefined;
+    return this.users.find(user => user.username === username);
   }
 
-  async createUser(insertUser: InsertUser): Promise<User> {
-    const [user] = await db
-      .insert(users)
-      .values(insertUser)
-      .returning();
+  async createUser(insertUser: Omit<User, 'id' | 'createdAt' | 'updatedAt'>): Promise<User> {
+    const user: User = {
+      id: this.userId.toString(),
+      username: insertUser.username,
+      email: insertUser.email,
+      passwordHash: insertUser.passwordHash,
+      createdAt: new Date(),
+      updatedAt: new Date()
+    };
+    this.users.push(user);
+    this.userId++;
     return user;
   }
 
-  async createContact(insertContact: InsertContact): Promise<Contact> {
-    const [contact] = await db
-      .insert(contacts)
-      .values(insertContact)
-      .returning();
+  async createContact(insertContact: Omit<Contact, 'id' | 'createdAt'>): Promise<Contact> {
+    const contact: Contact = {
+      id: this.contactId.toString(),
+      name: insertContact.name,
+      email: insertContact.email,
+      message: insertContact.message,
+      createdAt: new Date()
+    };
+    this.contacts.push(contact);
+    this.contactId++;
     return contact;
   }
 }
 
-export const storage = new DatabaseStorage();
+export const storage = new InMemoryStorage();
