@@ -43,19 +43,19 @@ export default function LeadershipSection() {
           <h3 className="text-2xl font-bold text-navy mb-6 text-center">Key Achievements</h3>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h4 className="font-semibold text-lg text-navy mb-3">President, Techno Sreshtha (IT Club)</h4>
+              <h4 className="font-semibold text-lg text-navy mb-3">Teaching Excellence</h4>
               <ul className="space-y-2 text-gray-700">
-                <li>• Designed technical workshops in Python and Adobe Photoshop</li>
-                <li>• Coordinated events with 300+ participants</li>
-                <li>• Developed interactive instructional materials</li>
+                <li>• Taught 300+ students in Java programming courses</li>
+                <li>• Improved average lab performance scores by 15%</li>
+                <li>• Designed problem-solving strategies and coding fundamentals</li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-lg text-navy mb-3">Teaching Impact</h4>
+              <h4 className="font-semibold text-lg text-navy mb-3">Technical Leadership</h4>
               <ul className="space-y-2 text-gray-700">
-                <li>• Improved student grades by 15% through personalized guidance</li>
-                <li>• Led weekly study halls and lab sessions</li>
-                <li>• Created engaging in-class activities for 700+ students</li>
+                <li>• Developed mobile AR applications with Unity</li>
+                <li>• Built full-stack solutions for manufacturing plants</li>
+                <li>• Led cross-platform mobile app development projects</li>
               </ul>
             </div>
           </div>

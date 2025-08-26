@@ -26,13 +26,13 @@ export default function AboutSection() {
               </div>
               <div className="border-l-4 border-navy-light pl-6">
                 <h4 className="font-semibold text-lg">Bachelor of Science in Computer Science</h4>
-                <p className="text-gray-600">Arizona State University | GPA: 3.99 | Dean's List (All Semesters) | May 2025</p>
+                <p className="text-gray-600">Arizona State University | GPA: 3.98 | Dean's List (All Semesters) | May 2025</p>
               </div>
             </div>
             <p className="mt-6 text-gray-700 leading-relaxed">
-              I'm currently pursuing my Master's degree while working as a Graduate Services Assistant. 
-              My academic journey has been marked by consistent excellence and a deep commitment to learning 
-              and teaching others in the field of computer science.
+              I'm currently pursuing my Master's degree while working as an Instructional Assistant for programming courses. 
+              My academic journey has been marked by consistent excellence and hands-on experience in software development, 
+              from mobile AR applications to full-stack web solutions.
             </p>
           </div>
         </div>

@@ -3,34 +3,34 @@ import { ExternalLink, Github } from "lucide-react";
 export default function ProjectsSection() {
   const projects = [
     {
+      title: "BreatheFree - Smoking Cessation App",
+      description: "Cross-platform mobile app (iOS, Android, Apple Watch) that tracks nicotine intake and provides AI-driven tapering plans with behavioral support tools including daily affirmations and social leaderboards.",
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+      technologies: ["Swift (iOS + watchOS)", "Kotlin (Android)", "Firebase", "OpenAI API"],
+      github: "#",
+      demo: "#"
+    },
+    {
+      title: "WanderMind - AI Travel Planner",
+      description: "AI-powered travel planner that generates personalized itineraries, optimized routes, and budget breakdowns. Features Google Maps integration and reduces planning time by ~40% through LLM-powered recommendations.",
+      image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+      technologies: ["Next.js", "Flask", "Google Maps API", "MongoDB", "OpenAI API"],
+      github: "#",
+      demo: "#"
+    },
+    {
       title: "SeedIT - Startup Success Predictor",
-      description: "Developed a machine learning model to predict startup success during a 48-hour hackathon. Created an interactive JavaScript dashboard for data visualization.",
+      description: "Machine learning-based startup success prediction model built during a 48-hour hackathon. Features an interactive JavaScript dashboard and showcased effective teamwork under pressure.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
       technologies: ["Python", "JavaScript", "Machine Learning"],
       github: "#",
       demo: "#"
     },
     {
-      title: "iOS Learning Platform",
-      description: "Mobile application developed during TA work for CSE 335. Features interactive learning modules and progress tracking for computer science concepts.",
-      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-      technologies: ["Swift", "iOS", "Education"],
-      github: "#",
-      demo: "#"
-    },
-    {
-      title: "Data Mining Analytics Tool",
-      description: "Advanced analytics platform developed as part of CSE 572 coursework. Implements various data mining algorithms with interactive visualization capabilities.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-      technologies: ["Python", "TensorFlow", "Data Science"],
-      github: "#",
-      demo: "#"
-    },
-    {
-      title: "Student Management System",
-      description: "Full-stack web application for managing student information and course enrollment. Built with modern frameworks and RESTful API architecture.",
-      image: "https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-      technologies: ["React", "Node.js", "MySQL"],
+      title: "Manufacturing Plant Tracker",
+      description: "Full-stack application built during internship at Vayumegha Systems for tracking production and streamlining communication. Features WebSocket integration for real-time updates and optimized database design.",
+      image: "https://images.unsplash.com/photo-1565514020179-026b92b84bb6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+      technologies: ["ReactJS", "Node.js", "MySQL", "WebSockets"],
       github: "#",
       demo: "#"
     }

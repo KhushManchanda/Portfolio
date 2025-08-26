@@ -2,7 +2,19 @@
 
 ## Overview
 
-This is a modern, responsive portfolio website built for Khush Manchanda, a Computer Science graduate student at Arizona State University. The application showcases professional experience, projects, skills, and provides a contact form for potential opportunities. The site is built using a full-stack architecture with React frontend and Express backend.
+This is a modern, responsive portfolio website built for Khush Manchanda, a Computer Science graduate student at Arizona State University. The application showcases his software development experience, mobile and web projects, technical skills, and provides a contact form for potential opportunities. The site is built using a full-stack architecture with React frontend and Express backend.
+
+## Recent Changes (January 2025)
+
+- Updated all content to reflect Khush's latest resume and experience
+- Changed experience from Graduate Services Assistant to Instructional Assistant for CSE 110
+- Added Software Developer role for Mobile AR Application project
+- Updated Software Engineer Intern experience at Vayumegha Systems
+- Replaced projects with current work: BreatheFree app, WanderMind travel planner, and manufacturing tracker
+- Expanded technical skills to include mobile development, AI integration, and modern frameworks
+- Updated leadership section to reflect current technical achievements
+- Connected to PostgreSQL database for contact form storage
+- Updated resume download to use latest SWE resume file
 
 ## User Preferences
 

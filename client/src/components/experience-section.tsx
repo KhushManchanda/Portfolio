@@ -4,47 +4,37 @@ export default function ExperienceSection() {
   const experiences = [
     {
       icon: GraduationCap,
-      date: "January 2025 – Present",
-      title: "Graduate Services Assistant – Grader",
-      company: "SCAI, Ira A. Fulton Schools of Engineering, ASU",
+      date: "August 2025 – Present",
+      title: "Instructional Assistant – CSE 110: Principles of Programming",
+      company: "Arizona State University",
       responsibilities: [
-        "Evaluated assignments for CSE 572: Data Mining (120+ students)",
-        "Collaborated with Professor Yanjie Fu on grading rubrics",
-        "Increased student grades by 15% through personalized guidance"
+        "Taught lab sessions for 4 sections (300+ students) in introductory Java programming",
+        "Designed lessons on problem-solving strategies and coding fundamentals",
+        "Improved average lab performance scores by 15% through individualized support"
       ],
       side: "right"
     },
     {
       icon: Users,
-      date: "August 2022 – May 2025",
-      title: "Client Services Assistant Lead",
-      company: "International Students and Scholars Center, ASU",
+      date: "August 2024 – May 2025",
+      title: "Software Developer – Mobile Augmented Reality Application",
+      company: "Cal Poly State University & Arizona State University",
       responsibilities: [
-        "Led team of 20 student workers supporting 10,000+ international students",
-        "Primary contact for immigration-related inquiries",
-        "Streamlined support processes across university departments"
+        "Developed mobile AR application in Unity with interactive object rendering and gaze tracking",
+        "Collaborated with faculty to design scalable and maintainable architecture",
+        "Produced fully functional prototype demoed to faculty for research validation"
       ],
       side: "left"
     },
     {
       icon: Presentation,
-      date: "August 2022 – May 2024",
-      title: "Undergraduate Teaching Assistant",
-      company: "Ira A. Fulton Schools of Engineering, ASU",
-      responsibilities: [],
-      courses: [
-        {
-          name: "CSE 110: Principles of Programming with Java",
-          description: "Assisted 70+ first-year students, led weekly study halls"
-        },
-        {
-          name: "CSE 360: Introduction to Software Engineering",
-          description: "Collaborated on curriculum for 700+ students"
-        },
-        {
-          name: "CSE 335: Principles of Mobile App Development",
-          description: "Taught Swift programming and mobile development"
-        }
+      date: "May 2023 – August 2023",
+      title: "Software Engineer Intern",
+      company: "Vayumegha Systems, Noida, India",
+      responsibilities: [
+        "Built full-stack application (ReactJS, Node.js, MySQL) for manufacturing plant tracking",
+        "Integrated WebSockets for real-time updates, reducing downtime by 15%",
+        "Enhanced system reliability through optimized database schemas and API endpoints"
       ],
       side: "right"
     }
@@ -83,16 +73,7 @@ export default function ExperienceSection() {
                         ))}
                       </ul>
                     )}
-                    {exp.courses && (
-                      <div className="mt-4 space-y-3">
-                        {exp.courses.map((course, idx) => (
-                          <div key={idx}>
-                            <p className="font-medium text-navy">{course.name}</p>
-                            <p className="text-gray-700 text-sm">{course.description}</p>
-                          </div>
-                        ))}
-                      </div>
-                    )}
+
                   </div>
                 </div>
               </div>

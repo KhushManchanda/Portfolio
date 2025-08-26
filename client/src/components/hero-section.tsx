@@ -28,8 +28,8 @@ export default function HeroSection() {
               Hi, I'm <span className="text-navy-light">Khush</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Computer Science graduate student at Arizona State University with a passion for teaching, 
-              software engineering, and machine learning. Currently pursuing MS in Computer Science with a 4.0 GPA.
+              Software Developer and Computer Science graduate student at Arizona State University with expertise in 
+              full-stack development, mobile applications, and AI integration. Currently pursuing MS in Computer Science with a 4.0 GPA.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
