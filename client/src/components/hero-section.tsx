@@ -22,19 +22,23 @@ export default function HeroSection() {
   return (
     <section id="home" className="pt-16 min-h-screen flex items-center bg-gradient-to-br from-gray-light to-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-4xl mx-auto text-center">
           <div>
-            <h1 className="text-4xl md:text-6xl font-bold text-navy mb-6">
-              Hi, I'm <span className="text-navy-light">Khush</span>
+            <h1 className="text-5xl md:text-7xl font-bold text-navy mb-6">
+              <span className="inline-block animate-wave">Hi,</span>
+              <span className="inline-block mx-3 animate-bounce">I'm</span>
+              <span className="inline-block text-navy-light animate-glow">
+                Khush
+              </span>
             </h1>
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+            <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
               Software Developer and Computer Science graduate student at Arizona State University with expertise in 
               full-stack development, mobile applications, and AI integration. Currently pursuing MS in Computer Science with a 4.0 GPA.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 onClick={handleDownloadResume}
-                className="bg-navy text-white px-8 py-3 rounded-lg font-medium hover:bg-navy-light transition-colors"
+                className="bg-navy text-white px-8 py-3 rounded-lg font-medium hover:bg-navy-light transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 <Download className="mr-2 h-4 w-4" />
                 Download Resume
@@ -42,18 +46,18 @@ export default function HeroSection() {
               <Button 
                 onClick={scrollToProjects}
                 variant="outline"
-                className="border-2 border-navy text-navy px-8 py-3 rounded-lg font-medium hover:bg-navy hover:text-white transition-colors"
+                className="border-2 border-navy text-navy px-8 py-3 rounded-lg font-medium hover:bg-navy hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 <ExternalLink className="mr-2 h-4 w-4" />
                 View Projects
               </Button>
             </div>
-            <div className="flex space-x-6 mt-8">
+            <div className="flex space-x-6 mt-8 justify-center">
               <a 
                 href="https://linkedin.com/in/khushmanchanda" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-navy-light text-2xl transition-colors"
+                className="text-gray-600 hover:text-navy-light text-2xl transition-all duration-300 transform hover:scale-110"
                 aria-label="LinkedIn"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -64,7 +68,7 @@ export default function HeroSection() {
                 href="https://github.com/khushmanchanda" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-navy-light text-2xl transition-colors"
+                className="text-gray-600 hover:text-navy-light text-2xl transition-all duration-300 transform hover:scale-110"
                 aria-label="GitHub"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -73,7 +77,7 @@ export default function HeroSection() {
               </a>
               <a 
                 href="mailto:khush.manchanda@asu.edu"
-                className="text-gray-600 hover:text-navy-light text-2xl transition-colors"
+                className="text-gray-600 hover:text-navy-light text-2xl transition-all duration-300 transform hover:scale-110"
                 aria-label="Email"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -81,13 +85,6 @@ export default function HeroSection() {
                 </svg>
               </a>
             </div>
-          </div>
-          <div className="flex justify-center">
-            <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800" 
-              alt="Professional headshot" 
-              className="rounded-full w-80 h-80 object-cover shadow-2xl border-8 border-white" 
-            />
           </div>
         </div>
       </div>
