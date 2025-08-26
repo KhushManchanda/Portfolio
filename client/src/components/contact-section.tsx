@@ -3,8 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { useMutation } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
 
 interface ContactForm {
   name: string;
@@ -21,30 +19,25 @@ export default function ContactSection() {
   
   const { toast } = useToast();
 
-  const contactMutation = useMutation({
-    mutationFn: async (data: ContactForm) => {
-      const response = await apiRequest("POST", "/api/contact", data);
-      return response.json();
-    },
-    onSuccess: () => {
-      toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
-      });
-      setForm({ name: "", email: "", message: "" });
-    },
-    onError: (error) => {
-      toast({
-        title: "Error",
-        description: "Failed to send message. Please try again.",
-        variant: "destructive",
-      });
-    },
-  });
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    contactMutation.mutate(form);
+    
+    // Create mailto link with form data
+    const subject = `Portfolio Contact from ${form.name}`;
+    const body = `Name: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`;
+    const mailtoLink = `mailto:khush.manchanda@asu.edu?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Open default email client
+    window.open(mailtoLink);
+    
+    // Show success message
+    toast({
+      title: "Message prepared!",
+      description: "Your default email client should open with the message. Please send it manually.",
+    });
+    
+    // Reset form
+    setForm({ name: "", email: "", message: "" });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -164,10 +157,9 @@ export default function ContactSection() {
               </div>
               <Button 
                 type="submit"
-                disabled={contactMutation.isPending}
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors"
               >
-                {contactMutation.isPending ? "Sending..." : "Send Message"}
+                Send Message
               </Button>
             </form>
           </div>
